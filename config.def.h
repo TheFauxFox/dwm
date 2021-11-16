@@ -798,6 +798,8 @@ static const char *dmenucmd[] = {
 	NULL
 };
 static const char *termcmd[]  = { "st", NULL };
+static const char *dmenubuilder[] = { "dmenubuilder", NULL };
+static const char *screenlock[] = { "slock", NULL };
 
 #if BAR_STATUSCMD_PATCH
 #if BAR_DWMBLOCKS_PATCH
@@ -825,6 +827,8 @@ static Key on_empty_keys[] = {
 
 static Key keys[] = {
 	/* modifier                     key            function                argument */
+	{ 0xffeb,						0x6c,		   spawn,				   {.v = screenlock } },
+	{ 0,                            0xffc6,        spawn,                  {.v = dmenubuilder } },
 	#if KEYMODES_PATCH
 	{ MODKEY,                       XK_Escape,     setkeymode,             {.ui = COMMANDMODE} },
 	#endif // KEYMODES_PATCH

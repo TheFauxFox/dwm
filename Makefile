@@ -41,6 +41,7 @@ endif
 
 clean:
 	rm -f dwm ${OBJ} dwm-${VERSION}.tar.gz
+	rm -f config.h
 	rm -f dwm-msg
 
 dist: clean
